@@ -55,8 +55,8 @@
 .maincontent {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "menuLateral contentFrame ";
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "contentArtigo menuLateral";
   padding-top: 50px;
   flex: 1 0 auto;
 }
@@ -102,7 +102,6 @@
 }
 
 .contentFrame {
-  grid-area: contentFrame;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -134,6 +133,7 @@
 }
 
 .contentArtigo {
+  grid-area: contentArtigo;
   display: flex;
   flex-direction: column;
   padding-left: 15px;
@@ -147,8 +147,8 @@
 
 .textArtigo {
   font-size: 14px;
-  max-width: 750px;
-  justify-content: baseline;
+  justify-content: center;
+  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   color: $branco;
@@ -156,7 +156,7 @@
 
 hr {
   width: 100%;
-  color: $darkorchid;
+  color: #ae39e9;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -177,6 +177,8 @@ hr {
 .layoutImg {
   width: 100%;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about {
@@ -198,6 +200,7 @@ hr {
 .logoFooter {
   width: 50px;
 }
+
 .contentFooter,
 a {
   text-decoration: none;
@@ -208,4 +211,42 @@ a {
 .top-logo {
   width: 30px;
   height: 40px;
+}
+
+@media (max-width: 780px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .maincontent {
+    grid-template-areas: "contentArtigo" "menuLateral";
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menuLateral {
+    margin: 0 auto;
+    border-radius: 40px;
+  }
+
+  .contentArtigo {
+    grid-area: contentArtigo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contentFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .artigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -1,0 +1,106 @@
+body {
+  min-height: 100vh;
+  background: $fundoFonte;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-shine {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.headerfontes {
+  background: $darkroxo;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 25px;
+  gap: 15px;
+}
+
+.boxText {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex: 1 0 auto;
+  gap: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.contentbox {
+  color: $branco;
+  padding: 20px;
+  background: $cinzitransparente;
+}
+
+.insidebox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
+  flex: 1 0 auto;
+}
+
+.contentboxinsidelink {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stars {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.stars span {
+  width: 10px;
+  height: 10px;
+  background: $laranja;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px $laranjopaco, 0 0 50px $laranja, 0 0 100px $laranja;
+  animation: animar calc(150s / var(--m)) linear infinite;
+}
+
+@keyframes animar {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-20vh) scale(1);
+  }
+}
+
+.stars span:nth-of-type(2n) {
+  background: $darkorchid;
+  box-shadow: 0 0 0 10px $orchidtransparente, 0 0 50px $darkorchid,
+    0 0 100px $darkorchid;
+}
+
+.stars span:nth-of-type(4n + 1) {
+  background: $ceu;
+  box-shadow: 0 0 0 10px $estrelaluz, 0 0 50px $ceu, 0 0 100px $ceu;
+}
+
+.footerBox {
+  background: $darkroxo;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 25px;
+  gap: 15px;
+}
