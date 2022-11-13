@@ -65,6 +65,7 @@ body {
 .boxText {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   align-content: center;
   flex: 1 0 auto;
   gap: 10px;
@@ -74,6 +75,8 @@ body {
 
 .contentbox {
   color: #fff;
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
   background: rgba(28, 28, 28, 0.5607843137);
 }
@@ -88,7 +91,20 @@ body {
 
 .contentboxinsidelink {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  flex: 1 0 auto;
+  gap: 10px;
+}
+
+.contentboxinside {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+  gap: 10px;
 }
 
 .stars {
@@ -148,4 +164,24 @@ a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+}
+
+@media (max-width: 480px) {
+
+  .headerfontes {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .box-shine {
+    overflow: scroll;
+  }
+
+  .footerBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
 }
