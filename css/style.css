@@ -5,12 +5,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+
+/*Conteudo geral*/
 body {
   background: #281038;
 }
-
-/*Conteudo geral*/
-
 
 .container {
   min-height: 100vh;
@@ -63,7 +62,7 @@ body {
 }
 
 
-/*Grade Lado Esquerdo*/
+/*organização do conteudo central*/
 
 .gridContainer {
   display: grid;
@@ -74,9 +73,7 @@ body {
   flex: 1 0 auto;
 }
 
-/*Video conteudo esquerdo*/
-
-
+/*Conteudo princiapl*/
 .contentFrame {
   grid-area: contentFrame;
   display: flex;
@@ -113,8 +110,6 @@ body {
   display: flex;
   border-radius: 25px;
 }
-
-
 
 .titleArtigo {
   font-size: 22px;
@@ -160,7 +155,7 @@ hr {
 }
 
 
-/*Grade lado direito*/
+/*Lista de Documentarios*/
 .menuLateral {
   grid-area: menuLateral;
   padding: 15px;
@@ -257,7 +252,6 @@ a {
 
   .header {
     padding: 15px;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
 
@@ -282,12 +276,6 @@ a {
 }
 
 @media(max-width: 450px) {
-  .header {
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
 
   .footer {
     display: flex;
