@@ -9,26 +9,27 @@ body {
   background: #281038;
 }
 
+/*Conteudo geral*/
+
+
 .container {
   min-height: 100vh;
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  flex: 1 0 auto;
   flex-direction: column;
 }
 
+/*Cabeçalho*/
 .header {
   background: #19002b;
+  width: 100%;
+  min-height: 40px;
   display: flex;
+  padding: 25px;
   flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex: 1 0 auto;
   align-items: center;
   align-content: center;
-  padding: 25px;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 10px;
   border-radius: 0 0 90px 90px;
   box-shadow: 0px 0px 10px 8px #ae39e9;
 }
@@ -61,25 +62,115 @@ body {
   border-radius: 5px 5px 0 0;
 }
 
-.maincontent {
-  min-height: 100vh;
+
+/*Grade Lado Esquerdo*/
+
+.gridContainer {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-areas: "contentFrame menuLateral";
-  gap: 20px;
-  padding-top: 50px;
-
+  gap: 15px;
+  padding: 2vh;
+  flex: 1 0 auto;
 }
 
-.menuLateral {
-  grid-area: menuLateral;
+/*Video conteudo esquerdo*/
+
+
+.contentFrame {
+  grid-area: contentFrame;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(28, 28, 28, 0.5607843137);
+  gap: 10px;
+}
+
+.artigo {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.paragrafos {
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imgArtigo {
+  width: 300px;
+  display: flex;
+  border-radius: 25px;
+}
+
+
+
+.titleArtigo {
+  font-size: 22px;
+  text-align: center;
   padding: 15px;
-  margin: 0 30px 0 0;
-  min-height: 100vh;
+}
+
+.textArtigo {
+  font-size: 14px;
+  justify-content: center;
+  padding: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+hr {
+  width: 100%;
+  color: #ae39e9;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.titlemateria {
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  padding: 5px;
+}
+
+.layoutImg {
+  width: 100%;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 0 40px 0 0;
+  align-content: center;
+  margin: 10px;
+}
+
+.about {
+  color: #fff;
+}
+
+
+/*Grade lado direito*/
+.menuLateral {
+  grid-area: menuLateral;
+  padding: 15px;
+  margin-left: 26px;
+  min-width: 300px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
   background: rgba(29, 5, 165, 0.2470588235);
 }
 
@@ -111,116 +202,18 @@ body {
   font-size: 15px;
 }
 
-.contentFrame {
-  grid-area: contentFrame;
-  display: flex;
-  margin-left: 25px;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  background: rgba(28, 28, 28, 0.5607843137);
-  gap: 15px;
-  padding: 25px;
-}
 
-.artigo {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  color: #fff;
-}
-
-.paragrafos {
-  color: #fff;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.imgArtigo {
-  width: 300px;
-  display: flex;
-  border-radius: 25px;
-}
-
-.contentArtigo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
-.titleArtigo {
-  font-size: 22px;
-  text-align: center;
-  padding: 15px;
-}
-
-.textArtigo {
-  font-size: 14px;
-  justify-content: center;
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  color: #fff;
-}
-
-hr {
-  width: 100%;
-  color: #ae39e9;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.textArtigofloat {
-  color: #fff;
-  font-size: 16px;
-  padding-top: 20px;
-}
-
-.titlemateria {
-  color: #fff;
-  font-size: 16px;
-  text-align: left;
-  padding: 5px;
-}
-
-.layoutTotal {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.layoutImg {
-  width: 100%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  margin: 10px;
-}
-
-.about {
-  color: #fff;
-}
+/*Rodapé*/
 
 .footer {
   background: #19002b;
+  width: 100%;
+  min-height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  align-content: center;
   padding: 25px;
   gap: 15px;
 }
@@ -241,53 +234,121 @@ a {
   height: 40px;
 }
 
-@media (max-width: 850px) {
+/*Media Query*/
+
+@media (max-width: 930px) {
   .header {
     display: flex;
     flex-direction: column;
-    gap: 10px;
   }
 
-  .maincontent {
+  .gridContainer {
+    grid-template-areas:
+      "contentFrame"
+      "menuLateral";
     display: flex;
     flex-direction: column;
-    flex: 0 1 auto;
-    margin: 0 auto;
-    gap: 15px;
+    align-items: center;
+    position: relative;
+  }
+}
+
+@media(max-width: 610px) {
+
+  .header {
+    padding: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+  .logo-alien {
+    width: 90px;
+  }
+
+  .titleHeader {
+    font-size: 42px;
+  }
+
+  .imgArtigo {
+    width: 200px;
+  }
+
+  .layoutImg {
+    width: 70%;
+  }
+
+}
+
+@media(max-width: 450px) {
+  .header {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+}
+
+@media(max-width: 340px) {
+
+  .titleHeader {
+    font-size: 22px;
+  }
+
+  .logo-alien {
+    width: 60px;
+  }
+
+  .imgArtigo {
+    width: 200px;
   }
 
   .menuLateral {
-    margin: 0 auto;
-    border-radius: 40px;
+    margin-left: 0;
+    min-width: 280px;
   }
 
-  .contentArtigo {
+  .footer {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
   }
 
-  .contentFrame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-  }
-
-  .artigo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
 }
 
-@media (max-width: 645px) {
-  .container {}
+@media (max-width: 280px) {
+
+
+  .logo-alien {
+    width: 50px;
+  }
+
+  .imgArtigo {
+    width: 100px;
+  }
+
+  .menuLateral {
+    margin-left: 0;
+    min-width: 280px;
+  }
+
+  .top-logo {
+    visibility: hidden;
+  }
+
+  .footer {
+    height: 11vh;
+    gap: 0;
+    padding: 5px;
+
+  }
+
 }
-
-
-
-/*# sourceMappingURL=style.css.map */
